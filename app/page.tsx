@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <section className="home min-h-screen flex p-10 flex-col-reverse items-center justify-center gap-10 sm:flex-row sm:mx-40 sm:items-start">
-        <div className="content grid gap-5 sm:mx-30 my-10">
+      <section className="home min-h-screen py-40 flex flex-col-reverse items-center justify-center gap-10 sm:flex-row sm:mx-40 sm:items-start">
+        <div className="content grid gap-5 sm:mx-40 my-10">
           <h1 className="text-4xl text-center sm:text-left">
             <b>
               Hi, I'm John,<br /> Creative Technologist
@@ -29,7 +29,7 @@ export default function Home() {
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
-          <Button className="px-6 py-3 text-white bg-red-500 hover:bg-red-600 rounded-md sm:w-auto mx-auto sm:mx-0">
+          <Button className="px-6 py-3 text-white bg-red-500 hover:bg-red-600 rounded-md lg:w-1/3 ">
             Download Resume
           </Button>
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
           alt="John Doe"
           width={243}
           height={243}
-          className="rounded-full"
+          className="rounded-full shadow-lg border-4 border-gray-200"
         />
       </section>
 
@@ -56,7 +56,7 @@ export default function Home() {
             </Link>
           </li>
         </ul>
-        <div className="posts grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="posts grid gap-5 sm:grid-cols-2">
           <Card className="bg-white w-full p-5 shadow-lg rounded-lg">
             <CardHeader>
               <CardTitle className="text-xl font-bold">Design System</CardTitle>
