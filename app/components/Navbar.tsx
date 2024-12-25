@@ -17,19 +17,19 @@ const Navbar = () => {
       {/*Desktop Navbar*/}
       <div className="hidden sm:flex justify-end items-center">
         <ul className="flex gap-5">
-          <li className="cursor-pointer relative group">
+          <li className="cursor-pointer relative group active:text-orange-500 visited:text-orange-500">
             <Link href={"/works"}>
               <b>Works</b>
             </Link>
             <span className="absolute w-full h-[2px] bg-black scale-x-0 left-0 bottom-0 group-hover:scale-x-100 transition-transform duration-100 origin-bottom"></span>
           </li>
-          <li className="cursor-pointer relative group">
+          <li className="cursor-pointer relative group active:text-orange-500 visited:text-orange-500">
             <Link href={"/blog"}>
               <b>Blog</b>
             </Link>
             <span className="absolute w-full h-[2px] bg-black scale-x-0 left-0 bottom-0 group-hover:scale-x-100 transition-transform duration-100 origin-bottom"></span>
           </li>
-          <li className="cursor-pointer relative group">
+          <li className="cursor-pointer relative group active:text-orange-500 visited:text-orange-500">
             <Link href={"/contact"}>
               <b>Contact</b>
             </Link>
