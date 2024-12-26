@@ -15,14 +15,12 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { Badge } from "lucide-react";
-import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: "John's Portfolio - Works",
   description: "John's Portfolio Works Page",
 };
-
 
 const works = [
   {
@@ -59,22 +57,20 @@ const works = [
   },
 ];
 
-
 function page() {
-
   return (
-    <>
+    <div  className="works-page animate-appear">
       <Navbar />
-      <section className="works py-3 px-10 justify-center items-center">
+      <section className=" py-3 px-10 justify-center items-center">
         {/* Desktop */}
         <div className="dk-post-works justify-center items-center hidden sm:grid">
-        <h1 className="title text-3xl">
-          <b>Works</b>
-        </h1>
+          <h1 className="title text-3xl">
+            <b>Works</b>
+          </h1>
           {works.map((work, index) => (
             <Card
               key={index}
-              className="work shadow-none outline-none border-0 p-5 flex gap-4 items-start"
+              className="work shadow-none outline-none border-0 flex gap-4 justify-center items-center"
             >
               <CardHeader>
                 <Image
@@ -85,7 +81,7 @@ function page() {
                   className="rounded-lg object-cover shadow-sm"
                 />
               </CardHeader>
-              <CardContent className="grid justify-center items-center gap-2">
+              <CardContent className="grid gap-2">
                 <CardTitle className="text-2xl font-bold">
                   {work.title}
                 </CardTitle>
@@ -103,12 +99,39 @@ function page() {
           ))}
         </div>
         {/* Mobile */}
-        <div className="mb-post-works sm:hidden">
-
+        <div className="mb-post-works sm:hidden flex flex-col gap-4">
+          <h1 className="title text-3xl text-center">
+            <b>Works</b>
+          </h1>
+          {works.map((work, index) => (
+            <div
+              key={index}
+              className="work flex flex-col gap-4 opacity-0 animate-appear"
+              style={{ animationDelay: `${index * 0.2}s` }} // Staggered animation
+            >
+              <Image
+                src={work.image}
+                alt={`work_${index + 1}`}
+                width={300}
+                height={200}
+                className="rounded-lg object-cover shadow-sm"
+              />
+              <div className="flex flex-col gap-2">
+                <h2 className="text-2xl font-bold">{work.title}</h2>
+                <div className="flex items-center gap-2">
+                  <span className="bg-blue-950 text-gray-200 px-3 py-1 rounded-md">
+                    {work.year}
+                  </span>
+                  <p>{work.category}</p>
+                </div>
+                <p className="text-gray-600">{work.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -15,9 +15,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="home animate-appear">
       <Header />
-      <section className="home min-h-screen py-40 flex flex-col-reverse items-center justify-center gap-10 sm:flex-row sm:mx-40 sm:items-start">
+      <section className="min-h-screen py-40 flex flex-col-reverse items-center justify-center gap-10 sm:flex-row sm:mx-40 sm:items-start">
         <div className="content grid gap-5 sm:mx-40 my-10">
           <h1 className="text-4xl text-center sm:text-left">
             <b>
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
       <Works />
       <Footer />
-    </>
+    </div>
   );
 }
 

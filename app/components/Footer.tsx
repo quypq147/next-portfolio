@@ -4,7 +4,6 @@ import fbIco from '@/public/images/socials/facebook.svg';
 import twIco from '@/public/images/socials/twitter.svg';
 import igIco from '@/public/images/socials/instagram.svg';
 import lnIco from '@/public/images/socials/linkedin.svg';
-import Link from 'next/link';
 
 function Footer() {
 
@@ -32,7 +31,7 @@ function Footer() {
   ]
 
   return (
-    <section className='footer p-10 grid justify-center items-center'>
+    <section className='footer p-10 gap-5 grid justify-center items-center'>
       <div className='footer-social gap-5 flex justify-center'>
         {socials.map((social, index) => (
           <Image key={index} width={24} height={24} src={social.icon} alt={social.name} />
